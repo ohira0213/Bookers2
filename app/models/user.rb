@@ -13,7 +13,7 @@ class User < ApplicationRecord
     length: { minimum: 2, maximum: 20 }
   validates :introduction,
     length: {maximum: 50 }
-    
+
   validates :user_id, uniqueness: {scope: :book_id}
 
   def get_profile_image(width, height)
